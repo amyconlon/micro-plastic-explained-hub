@@ -61,9 +61,14 @@ const ProductCard = ({
           
           <div className="flex items-center justify-between">
             <span className="text-lg font-bold text-gray-900">{price}</span>
-            <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+            <a 
+              href={linkUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={`Buy ${title}`}
+            >
               <Button className="bg-ocean-600 hover:bg-ocean-700">
-                View Product
+                Buy Now
               </Button>
             </a>
           </div>
