@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import NewsletterSignup from '@/components/NewsletterSignup';
@@ -17,7 +16,7 @@ const products = {
       title: "PureFlow™ Advanced Water Filter",
       description: "Removes 99.9% of microplastics and other contaminants from your drinking water.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$129.99",
+      price: "£99.99",
       rating: 4.8,
       linkUrl: "#",
       featured: true
@@ -27,7 +26,7 @@ const products = {
       title: "AquaGuard Home System",
       description: "Whole-house filtration system protecting all water sources in your home.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$349.99",
+      price: "£269.99",
       rating: 4.6,
       linkUrl: "#"
     },
@@ -36,7 +35,7 @@ const products = {
       title: "TapPure™ Faucet Filter",
       description: "Easy-to-install faucet attachment with microplastic filtering technology.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$45.99",
+      price: "£35.99",
       rating: 4.5,
       linkUrl: "#"
     },
@@ -45,7 +44,7 @@ const products = {
       title: "HydroClean Pitcher Filter",
       description: "Convenient pitcher with advanced filtration for clean, refreshing water.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$39.99",
+      price: "£31.99",
       rating: 4.4,
       linkUrl: "#"
     },
@@ -54,7 +53,7 @@ const products = {
       title: "NanoFilter Bottle",
       description: "Portable water bottle with built-in filter for on-the-go hydration.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$34.99",
+      price: "£27.99",
       rating: 4.3,
       linkUrl: "#"
     },
@@ -63,7 +62,7 @@ const products = {
       title: "UltraPure RO System",
       description: "Under-sink reverse osmosis system for maximum contaminant removal.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$249.99",
+      price: "£189.99",
       rating: 4.7,
       linkUrl: "#",
       featured: true
@@ -75,7 +74,7 @@ const products = {
       title: "MicroCatch™ Laundry Filter Bag",
       description: "Traps microfibers from synthetic clothing during washing cycles.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$24.99",
+      price: "£19.99",
       rating: 4.7,
       linkUrl: "#",
       featured: true
@@ -85,7 +84,7 @@ const products = {
       title: "EcoBottle™ Glass Water Bottle",
       description: "Plastic-free reusable water bottle with silicone protective sleeve.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$32.99",
+      price: "£25.99",
       rating: 4.9,
       linkUrl: "#"
     },
@@ -94,7 +93,7 @@ const products = {
       title: "WashPure™ Washing Machine Filter",
       description: "Attachment for your washing machine to capture microplastics.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$79.99",
+      price: "£61.99",
       rating: 4.4,
       linkUrl: "#"
     },
@@ -103,7 +102,7 @@ const products = {
       title: "SustainWrap Food Storage",
       description: "Reusable beeswax wraps to replace plastic cling film.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$18.99",
+      price: "£14.99",
       rating: 4.6,
       linkUrl: "#"
     },
@@ -112,7 +111,7 @@ const products = {
       title: "BambooLife Kitchen Set",
       description: "Sustainable bamboo kitchenware to replace plastic utensils.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$42.99",
+      price: "£33.99",
       rating: 4.5,
       linkUrl: "#"
     },
@@ -121,7 +120,7 @@ const products = {
       title: "EcoStorage Container Set",
       description: "Glass food storage containers with bamboo lids.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$36.99",
+      price: "£28.99",
       rating: 4.8,
       linkUrl: "#",
       featured: true
@@ -133,7 +132,7 @@ const products = {
       title: "PureBody™ Plastic-Free Soap Set",
       description: "Handcrafted soap bars with no microplastic ingredients or packaging.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$18.99",
+      price: "£14.99",
       rating: 4.9,
       linkUrl: "#",
       featured: true
@@ -143,7 +142,7 @@ const products = {
       title: "EcoSmile™ Bamboo Toothbrush Set",
       description: "Biodegradable toothbrushes with plant-based bristles.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$14.99",
+      price: "£11.99",
       rating: 4.6,
       linkUrl: "#"
     },
@@ -152,7 +151,7 @@ const products = {
       title: "NaturalGlow™ Plastic-Free Cosmetics",
       description: "Makeup collection free from microplastics and harmful chemicals.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$39.99",
+      price: "£30.99",
       rating: 4.7,
       linkUrl: "#"
     },
@@ -161,7 +160,7 @@ const products = {
       title: "ZeroWaste Shampoo Bar",
       description: "Solid shampoo that eliminates plastic bottles from your routine.",
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$12.99",
+      price: "£9.99",
       rating: 4.5,
       linkUrl: "#"
     },
@@ -170,7 +169,7 @@ const products = {
       title: "PureClean Dental Floss",
       description: "Biodegradable dental floss in a glass container.",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$8.99",
+      price: "£6.99",
       rating: 4.3,
       linkUrl: "#"
     },
@@ -179,7 +178,7 @@ const products = {
       title: "EcoSkin Face Scrub",
       description: "Natural exfoliant with biodegradable ingredients instead of microbeads.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
-      price: "$22.99",
+      price: "£17.99",
       rating: 4.8,
       linkUrl: "#",
       featured: true
@@ -198,10 +197,10 @@ const Solutions = () => {
     switch(sortOrder) {
       case "priceAsc":
         return productList.sort((a, b) => 
-          parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')));
+          parseFloat(a.price.replace('£', '')) - parseFloat(b.price.replace('£', '')));
       case "priceDesc":
         return productList.sort((a, b) => 
-          parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')));
+          parseFloat(b.price.replace('£', '')) - parseFloat(a.price.replace('£', '')));
       case "rating":
         return productList.sort((a, b) => b.rating - a.rating);
       case "featured":
