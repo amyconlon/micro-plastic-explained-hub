@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
+import { Star, Truck } from 'lucide-react';
 
 interface ProductCardProps {
   title: string;
@@ -11,6 +11,7 @@ interface ProductCardProps {
   rating: number;
   linkUrl: string;
   featured?: boolean;
+  ukAvailable?: boolean;
 }
 
 const ProductCard = ({
@@ -21,6 +22,7 @@ const ProductCard = ({
   rating,
   linkUrl,
   featured = false,
+  ukAvailable = false,
 }: ProductCardProps) => {
   return (
     <div className="product-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
@@ -49,13 +51,22 @@ const ProductCard = ({
         
         <p className="text-sm text-gray-600 mb-4">{description}</p>
         
-        <div className="flex items-center justify-between mt-auto">
-          <span className="text-lg font-bold text-gray-900">{price}</span>
-          <a href={linkUrl} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-ocean-600 hover:bg-ocean-700">
-              View Product
-            </Button>
-          </a>
+        <div className="mt-auto">
+          {ukAvailable && (
+            <div className="flex items-center text-sm text-teal-600 mb-3">
+              <Truck size={16} className="mr-1" />
+              <span>Available in UK</span>
+            </div>
+          )}
+          
+          <div className="flex items-center justify-between">
+            <span className="text-lg font-bold text-gray-900">{price}</span>
+            <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-ocean-600 hover:bg-ocean-700">
+                View Product
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

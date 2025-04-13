@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import ProductCard from '@/components/ProductCard';
-import { Filter, Sliders, ArrowUpDown } from 'lucide-react';
+import { Filter, Sliders, ArrowUpDown, Truck } from 'lucide-react';
 import { useState } from 'react';
 
-// Simulated product data - expanded version
 const products = {
   waterFilters: [
     {
@@ -19,7 +18,8 @@ const products = {
       price: "£99.99",
       rating: 4.8,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     },
     {
       id: 2,
@@ -28,7 +28,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£269.99",
       rating: 4.6,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 3,
@@ -37,7 +38,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£35.99",
       rating: 4.5,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 10,
@@ -46,7 +48,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£31.99",
       rating: 4.4,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 11,
@@ -55,7 +58,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£27.99",
       rating: 4.3,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 12,
@@ -65,7 +69,8 @@ const products = {
       price: "£189.99",
       rating: 4.7,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     }
   ],
   homeItems: [
@@ -77,7 +82,8 @@ const products = {
       price: "£19.99",
       rating: 4.7,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     },
     {
       id: 5,
@@ -86,7 +92,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£25.99",
       rating: 4.9,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 6,
@@ -95,7 +102,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£61.99",
       rating: 4.4,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 13,
@@ -104,7 +112,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£14.99",
       rating: 4.6,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 14,
@@ -113,7 +122,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£33.99",
       rating: 4.5,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 15,
@@ -123,7 +133,8 @@ const products = {
       price: "£28.99",
       rating: 4.8,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     }
   ],
   personalCare: [
@@ -135,7 +146,8 @@ const products = {
       price: "£14.99",
       rating: 4.9,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     },
     {
       id: 8,
@@ -144,7 +156,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£11.99",
       rating: 4.6,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 9,
@@ -153,7 +166,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£30.99",
       rating: 4.7,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 16,
@@ -162,7 +176,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£9.99",
       rating: 4.5,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 17,
@@ -171,7 +186,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£6.99",
       rating: 4.3,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 18,
@@ -181,7 +197,8 @@ const products = {
       price: "£17.99",
       rating: 4.8,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     }
   ]
 };
@@ -190,7 +207,6 @@ const Solutions = () => {
   const [currentTab, setCurrentTab] = useState("waterFilters");
   const [sortOrder, setSortOrder] = useState("featured");
   
-  // Sort products based on the selected order
   const getSortedProducts = (category: keyof typeof products) => {
     const productList = [...products[category]];
     
@@ -218,7 +234,6 @@ const Solutions = () => {
       <Navbar />
       
       <main className="flex-grow pt-16">
-        {/* Hero Section */}
         <div className="bg-teal-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
@@ -226,18 +241,30 @@ const Solutions = () => {
               <p className="text-xl text-teal-100">
                 Practical products and technologies to reduce your exposure to microplastics
               </p>
+              <div className="mt-6 flex items-center text-teal-100">
+                <Truck size={20} className="mr-2" />
+                <p>All products available with UK shipping</p>
+              </div>
             </div>
           </div>
         </div>
         
-        {/* Introduction */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl font-bold mb-4">Why Use Microplastic-Filtering Products?</h2>
               <p className="text-gray-700 mb-4">
-                With microplastics found in our water, food, and air, using specialized products can help reduce your exposure and environmental impact. Our curated selection represents some of the most effective solutions available.
+                With microplastics found in our water, food, and air, using specialized products can help reduce your exposure and environmental impact. Our curated selection represents some of the most effective solutions available in the UK market.
               </p>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+                <div className="flex">
+                  <div className="ml-3">
+                    <p className="text-sm text-blue-700">
+                      <strong>UK Availability:</strong> All products on this page are available for purchase in the United Kingdom with fast domestic shipping. Prices are shown in GBP (£) including VAT where applicable.
+                    </p>
+                  </div>
+                </div>
+              </div>
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
                 <div className="flex">
                   <div className="ml-3">
@@ -251,10 +278,8 @@ const Solutions = () => {
           </div>
         </section>
         
-        {/* Products Section */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Filter and Sort Controls */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
               <Tabs defaultValue="waterFilters" className="w-full md:w-auto">
                 <TabsList>
@@ -294,7 +319,6 @@ const Solutions = () => {
               </div>
             </div>
             
-            {/* Category Description */}
             <div className="mb-8">
               {currentTab === "waterFilters" && (
                 <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -324,7 +348,6 @@ const Solutions = () => {
               )}
             </div>
             
-            {/* Product Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentTab === "waterFilters" && getSortedProducts("waterFilters").map(product => (
                 <ProductCard
@@ -336,6 +359,7 @@ const Solutions = () => {
                   rating={product.rating}
                   linkUrl={product.linkUrl}
                   featured={product.featured}
+                  ukAvailable={product.ukAvailable}
                 />
               ))}
               
@@ -349,6 +373,7 @@ const Solutions = () => {
                   rating={product.rating}
                   linkUrl={product.linkUrl}
                   featured={product.featured}
+                  ukAvailable={product.ukAvailable}
                 />
               ))}
               
@@ -362,14 +387,37 @@ const Solutions = () => {
                   rating={product.rating}
                   linkUrl={product.linkUrl}
                   featured={product.featured}
+                  ukAvailable={product.ukAvailable}
                 />
               ))}
             </div>
           </div>
         </section>
         
-        {/* DIY Solutions */}
         <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold mb-4">UK Shipping Information</h2>
+              <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <div className="flex items-start space-x-4">
+                  <Truck className="flex-shrink-0 w-6 h-6 text-teal-600 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900">Shipping Details</h3>
+                    <ul className="mt-2 space-y-2 text-gray-700">
+                      <li>• Most products ship from UK warehouses within 1-3 business days</li>
+                      <li>• Free standard delivery on orders over £50</li>
+                      <li>• Express shipping options available at checkout</li>
+                      <li>• All prices include VAT where applicable</li>
+                      <li>• 30-day money-back guarantee on all products</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold">DIY and Low-Cost Solutions</h2>
@@ -423,8 +471,7 @@ const Solutions = () => {
           </div>
         </section>
         
-        {/* Future Technologies */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold">Emerging Technologies</h2>

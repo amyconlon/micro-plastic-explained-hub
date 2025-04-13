@@ -5,7 +5,7 @@ import ProductCard from './ProductCard';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-// Simulated product data with prices converted to GBP
+// Simulated product data with UK availability
 const products = {
   waterFilters: [
     {
@@ -16,7 +16,8 @@ const products = {
       price: "£99.99",
       rating: 4.8,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£269.99",
       rating: 4.6,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£35.99",
       rating: 4.5,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     }
   ],
   homeItems: [
@@ -46,7 +49,8 @@ const products = {
       price: "£19.99",
       rating: 4.7,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     },
     {
       id: 5,
@@ -55,7 +59,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£25.99",
       rating: 4.9,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 6,
@@ -64,7 +69,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£61.99",
       rating: 4.4,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     }
   ],
   personalCare: [
@@ -76,7 +82,8 @@ const products = {
       price: "£14.99",
       rating: 4.9,
       linkUrl: "#",
-      featured: true
+      featured: true,
+      ukAvailable: true
     },
     {
       id: 8,
@@ -85,7 +92,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£11.99",
       rating: 4.6,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     },
     {
       id: 9,
@@ -94,7 +102,8 @@ const products = {
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£30.99",
       rating: 4.7,
-      linkUrl: "#"
+      linkUrl: "#",
+      ukAvailable: true
     }
   ]
 };
@@ -109,6 +118,9 @@ const FeaturedProducts = () => {
           <h2 className="text-3xl font-bold text-gray-900">Recommended Solutions</h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
             Products we've researched and recommend to help reduce your exposure to microplastics.
+          </p>
+          <p className="mt-2 text-md text-teal-600 max-w-3xl mx-auto">
+            All products available with UK shipping
           </p>
         </div>
         
@@ -149,6 +161,7 @@ const FeaturedProducts = () => {
                   rating={product.rating}
                   linkUrl={product.linkUrl}
                   featured={product.featured}
+                  ukAvailable={product.ukAvailable}
                 />
               ))}
             </div>
@@ -166,6 +179,7 @@ const FeaturedProducts = () => {
                   rating={product.rating}
                   linkUrl={product.linkUrl}
                   featured={product.featured}
+                  ukAvailable={product.ukAvailable}
                 />
               ))}
             </div>
@@ -183,6 +197,7 @@ const FeaturedProducts = () => {
                   rating={product.rating}
                   linkUrl={product.linkUrl}
                   featured={product.featured}
+                  ukAvailable={product.ukAvailable}
                 />
               ))}
             </div>
