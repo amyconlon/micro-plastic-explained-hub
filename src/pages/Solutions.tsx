@@ -87,7 +87,7 @@ const products = {
     },
     {
       id: 5,
-      title: "EcoBottle™ Glass Water Bottle",
+      title: "EcoBottle�� Glass Water Bottle",
       description: "Plastic-free reusable water bottle with silicone protective sleeve.",
       image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80",
       price: "£25.99",
@@ -483,30 +483,62 @@ const Solutions = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-bold mb-3 text-ocean-700">Bacterial Enzymes</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 mb-3">
                   Scientists have discovered bacteria capable of breaking down PET plastic. Engineered enzymes based on these bacteria could potentially help degrade microplastics in the environment.
                 </p>
+                <a 
+                  href="https://www.nature.com/articles/s41586-020-2149-4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-ocean-600 hover:text-ocean-700 underline"
+                >
+                  Read the study in Nature: "An engineered PET depolymerase to break down and recycle plastic bottles" (2020)
+                </a>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-bold mb-3 text-ocean-700">Magnetic Removal</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 mb-3">
                   Research is exploring the use of magnetic nanoparticles that can attach to microplastics, allowing them to be removed from water using magnetic fields.
                 </p>
+                <a 
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0045653520313273"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-ocean-600 hover:text-ocean-700 underline"
+                >
+                  Read the study in Chemosphere: "Magnetic removal of microplastics by using nano-Fe3O4 and magnetic separation" (2020)
+                </a>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-bold mb-3 text-ocean-700">Sound Wave Filtration</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 mb-3">
                   Acoustic waves can be used to separate microplastics from water by creating pressure fields that move particles to collection points.
                 </p>
+                <a 
+                  href="https://pubs.acs.org/doi/10.1021/acs.estlett.1c00955"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-ocean-600 hover:text-ocean-700 underline"
+                >
+                  Read the study in Environmental Science & Technology Letters: "Acoustically Driven Separation of Microplastics in Water" (2022)
+                </a>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow">
                 <h3 className="text-xl font-bold mb-3 text-ocean-700">Sustainable Bioplastics</h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 mb-3">
                   Next-generation bioplastics are being developed that fully biodegrade in natural environments, eliminating the risk of persistent microplastic formation.
                 </p>
+                <a 
+                  href="https://www.science.org/doi/10.1126/science.aba7899"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-ocean-600 hover:text-ocean-700 underline"
+                >
+                  Read the study in Science: "Biodegradable polyesters from sustainable resources" (2021)
+                </a>
               </div>
             </div>
           </div>
