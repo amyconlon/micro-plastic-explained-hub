@@ -31,23 +31,27 @@ const MicroplasticSourceCard = ({
 
 const WhatAreMicroplastics = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="about-microplastics">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">What Are Microplastics?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">What Are Microplastics in Drinking Water?</h2>
             <p className="text-gray-700 mb-4">
-              Microplastics are tiny plastic particles less than 5mm in length. They come from various sources and have become ubiquitous in our environment.
+              Microplastics are tiny plastic particles less than 5mm in length that contaminate our drinking water. Studies show that tap water and bottled water both contain significant amounts of these harmful particles.
             </p>
             <p className="text-gray-700 mb-4">
-              These particles are either manufactured at this small size (primary microplastics) or result from the breakdown of larger plastic items (secondary microplastics).
+              These particles come from various sources including the breakdown of larger plastic items (secondary microplastics) or are manufactured at this tiny size (primary microplastics like microbeads in cosmetics).
             </p>
             <p className="text-gray-700 mb-6">
-              Research has shown that microplastics can absorb harmful chemicals and potentially release them in our bodies, posing significant health concerns.
+              Research published in scientific journals has shown that microplastics can absorb harmful chemicals and potentially release them in our bodies, posing significant health concerns including hormonal disruption and inflammation.
             </p>
-            <Link to="/about">
+            <h3 className="text-xl font-semibold text-gray-800 mb-3">How Water Filters Remove Microplastics</h3>
+            <p className="text-gray-700 mb-6">
+              High-quality water filters with technologies like activated carbon, reverse osmosis, and ultrafiltration can effectively remove microplastics from your drinking water, providing clean, safe water for your family.
+            </p>
+            <Link to="/solutions">
               <Button className="bg-ocean-600 hover:bg-ocean-700">
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                Explore Water Filter Solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -55,23 +59,23 @@ const WhatAreMicroplastics = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <MicroplasticSourceCard 
               icon={Droplet}
-              title="Synthetic Fibers"
-              description="Tiny fibers from synthetic clothing released during washing and drying cycles."
+              title="Synthetic Fibers in Water"
+              description="Tiny fibers from synthetic clothing released during washing cycles contaminate our water supply."
             />
             <MicroplasticSourceCard 
               icon={ShoppingBag}
-              title="Plastic Breakdown"
-              description="Larger plastic items breaking down over time into smaller and smaller particles."
+              title="Plastic Breakdown in Water"
+              description="Larger plastic items breaking down over time into microplastics that enter water sources."
             />
             <MicroplasticSourceCard 
               icon={Car}
-              title="Tire Wear"
-              description="Vehicle tires shed microplastic particles that wash into waterways."
+              title="Road Runoff Contamination"
+              description="Vehicle tires shed microplastic particles that wash into waterways and drinking water sources."
             />
             <MicroplasticSourceCard 
               icon={Shirt}
-              title="Microbeads"
-              description="Tiny plastic beads found in some cosmetics and personal care products."
+              title="Microbeads in Water Supply"
+              description="Tiny plastic beads found in cosmetics and personal care products entering water treatment systems."
             />
           </div>
         </div>

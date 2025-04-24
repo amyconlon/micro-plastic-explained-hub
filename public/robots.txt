@@ -25,8 +25,12 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
+# Specify important URLs for crawling priority
+Disallow: /404
+Disallow: /api/
+
 # Sitemap location
 Sitemap: https://microplastic-information-hub.com/sitemap.xml
 
-# Crawl delay for all bots
+# Prevent crawl rate issues
 Crawl-delay: 1
