@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-white">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Best Water Filters for Removing Microplastics
+              Understand and Combat the Invisible Threat of Microplastics
             </h1>
             <p className="text-lg opacity-90 mb-8">
               Microplastics are found in our water supply, food, and even the air we breathe. 
