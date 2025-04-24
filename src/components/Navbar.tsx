@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Droplet } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -17,7 +16,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Droplet className="h-8 w-8 text-ocean-600" />
+              <img src="/logo.svg" alt="MicroPlasticInfo Logo" className="h-8 w-8" />
               <span className="ml-2 text-xl font-bold text-gray-900">MicroPlastic<span className="text-ocean-600">Info</span></span>
             </Link>
           </div>

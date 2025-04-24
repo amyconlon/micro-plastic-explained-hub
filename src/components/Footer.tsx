@@ -1,6 +1,5 @@
-
 import { Link } from 'react-router-dom';
-import { Droplet, Instagram, Twitter, Facebook, Mail } from 'lucide-react';
+import { Instagram, Twitter, Facebook, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="flex items-center">
-              <Droplet className="h-8 w-8 text-ocean-400" />
+              <img src="/logo.svg" alt="MicroPlasticInfo Logo" className="h-8 w-8" />
               <span className="ml-2 text-xl font-bold">MicroPlastic<span className="text-ocean-400">Info</span></span>
             </Link>
             <p className="mt-4 text-sm text-gray-300">
