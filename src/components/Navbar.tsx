@@ -1,6 +1,7 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -38,6 +39,15 @@ const Navbar = () => {
             <Link to="/resources" className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-ocean-600 transition-colors">
               Resources
             </Link>
+            <a 
+              href="https://www.instagram.com/microplasticinfo" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-ocean-600 transition-colors flex items-center"
+            >
+              <Instagram size={18} className="mr-1" />
+              <span>@microplasticinfo</span>
+            </a>
             <Link to="/solutions">
               <Button variant="default" className="ml-4 bg-ocean-600 hover:bg-ocean-700">
                 Shop Solutions
@@ -101,6 +111,16 @@ const Navbar = () => {
           >
             Resources
           </Link>
+          <a 
+            href="https://www.instagram.com/microplasticinfo" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Instagram size={18} className="mr-2" />
+            @microplasticinfo
+          </a>
           <Link 
             to="/solutions" 
             className="block px-3 py-2 rounded-md text-base font-medium bg-ocean-600 text-white"
