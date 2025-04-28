@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Instagram, Twitter, Facebook, Mail } from 'lucide-react';
 
@@ -16,7 +17,7 @@ const Footer = () => {
               Raising awareness about microplastics and providing solutions for a cleaner world.
             </p>
             <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-ocean-400 transition-colors">
+              <a href="https://www.instagram.com/microplasticinfo" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-ocean-400 transition-colors">
                 <span className="sr-only">Instagram</span>
                 <Instagram size={20} />
               </a>
@@ -28,7 +29,7 @@ const Footer = () => {
                 <span className="sr-only">Facebook</span>
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-ocean-400 transition-colors">
+              <a href="mailto:info@microplasticinfo.com" className="text-gray-400 hover:text-ocean-400 transition-colors">
                 <span className="sr-only">Email</span>
                 <Mail size={20} />
               </a>
@@ -97,6 +98,14 @@ const Footer = () => {
                 <Link to="/contact" className="text-gray-400 hover:text-ocean-400 transition-colors">
                   Contact Us
                 </Link>
+              </li>
+              <li>
+                <div className="flex items-center text-gray-400">
+                  <Instagram size={16} className="mr-2" />
+                  <a href="https://www.instagram.com/microplasticinfo" target="_blank" rel="noopener noreferrer" className="hover:text-ocean-400 transition-colors">
+                    @microplasticinfo
+                  </a>
+                </div>
               </li>
               <li>
                 <Link to="/privacy" className="text-gray-400 hover:text-ocean-400 transition-colors">
